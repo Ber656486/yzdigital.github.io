@@ -1,0 +1,461 @@
+/* Genel Ayarlar */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa; /* çok açık gri */
+    color: #333; /* koyu gri */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #fff; /* tamamen beyaz */
+    color: #333;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    user-select: none;
+    color: #222;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #999;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #000;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    width: 100%;
+}
+
+/* Hero Bölümü */
+.hero {
+    background: linear-gradient(135deg, #002f6c 0%, #0052cc 100%);    color: #222;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: #ddd; /* açık gri */
+    color: #222;
+    padding: 15px 35px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: #bbb;
+    color: #000;
+}
+
+/* Hizmetler */
+.services {
+    padding: 60px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #222;
+}
+
+.service-card {
+    background: #f9f9f9; /* çok açık gri */
+    padding: 30px 20px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+    color: #444;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.packages {
+    background: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.packages h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #222;
+}
+
+.package-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background: #f9f9f9;
+    border-radius: 14px;
+    padding: 35px 30px;
+    width: 320px;
+    text-align: left;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.package-card h3 {
+    font-size: 22px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.package-card ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.package-card li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.package-card li::before {
+    content: '✔';
+    color: #28a745;
+    margin-right: 10px;
+}
+
+/* WhatsApp Butonu */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-whatsapp i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5b;
+}
+
+
+/* Referanslar */
+.references {
+    padding: 60px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.references h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #222;
+}
+
+.reference-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.reference-item {
+    background: #f9f9f9;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    max-width: 320px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    color: #444;
+}
+
+.reference-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.reference-item p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 16px;
+    min-height: 100px;
+}
+
+.ref-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ref-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.ref-author span {
+    font-weight: 700;
+    color: #222;
+    font-size: 18px;
+}
+
+/* Responsive - küçük ekranlarda kartlar alt alta */
+@media (max-width: 768px) {
+    .reference-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* İletişim */
+.contact {
+    background: #fff;
+    color: #222;
+    padding: 60px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+form {
+    flex: 1 1 600px;
+    max-width: 600px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #444;
+}
+
+input, textarea {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    color: #222;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #bbb;
+}
+
+textarea {
+    min-height: 140px;
+}
+
+button.btn-primary {
+    background-color: #eee;
+    color: #222;
+    border: 1px solid #ccc;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 10px;
+}
+
+button.btn-primary:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    color: #444;
+}
+
+.contact-info h3 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #555;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 600;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive genel */
+@media (max-width: 768px) {
+    .service-card, .package-card {
+        width: 90% !important;
+        margin: 15px auto !important;
+        display: block !important;
+    }
+}
